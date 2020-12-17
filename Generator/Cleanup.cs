@@ -120,6 +120,7 @@ public static class Cleanup
 		if ( name == "NotificationPosition" ) return "public";
 		if ( name == "GamepadTextInputMode" ) return "public";
 		if ( name == "GamepadTextInputLineMode" ) return "public";
+		if ( name == "TextFilteringContext" ) return "public";
 		if ( name == "CheckFileSignature" ) return "public";
 		if ( name == "BroadcastUploadResult" ) return "public";
 		if ( name == "PublishedFileId" ) return "public";

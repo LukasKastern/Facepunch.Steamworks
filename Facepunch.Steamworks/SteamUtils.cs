@@ -256,6 +256,17 @@ namespace Steamworks
 			return Internal.IsAPICallCompleted( call, ref failed );
 		}
 
+		
+		/// <summary>
+		/// Filters the provided input message, using legally required filtering and additional filtering based on the context and user settings.
+		/// </summary>
+		/// <param name="sourceSteamId">the Steam ID that is the source of the input string (e.g. the player with the name, or who said the chat text)</param>
+		public static string FilterText ( TextFilteringContext eContext, SteamId sourceSteamId, string textToFilter  )
+		{
+			Internal.FilterText( eContext, sourceSteamId, textToFilter, out var filteredText );
+			return filteredText;
+		}
+		
 
 		/// <summary>
 		/// Returns whether this steam client is a Steam China specific client, vs the global client
