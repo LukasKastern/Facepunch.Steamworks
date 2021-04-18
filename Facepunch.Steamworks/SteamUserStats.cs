@@ -233,6 +233,12 @@ namespace Steamworks
 			return data;
 		}
 
+		public static bool TryGetStatInt( string name, out int result )
+		{
+			result = 0;
+			return Internal.GetStat( name, ref result );
+		}
+
 		/// <summary>
 		/// Get a float stat value
 		/// </summary>
